@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Law Case Search</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/static/lawyer logo.jpg" alt="Law Logo" class="logo">
+            <h1>Past Case Retrieval System</h1>
+        </div>
+        <div class="content">
+            <!-- Left Column: Keyword Descriptions -->
+            <div class="keywords">
+                <h2>Notice</h2>
+                <h3>*Search the following keywords to match the cases:*</h3>
+                <ul>
+                    <li><strong>Criminal Law</strong>: Involves cases related to criminal offenses. Relevant acts include the Indian Penal Code (IPC).</li>
+                    <li><strong>Family Law</strong>: Deals with cases involving family matters, such as marriage and divorce. Relevant acts include the Hindu Marriage Act.</li>
+                    <li><strong>Civil Rights</strong>: Encompasses cases protecting individuals' rights. Applicable acts include the Protection of Civil Rights Act.</li>
+                    <li><strong>Property Law</strong>: Involves cases about property disputes and ownership. Relevant acts include the Transfer of Property Act.</li>
+                    <li><strong>Corporate Fraud</strong>: Pertains to cases of corporate misconduct. Related acts include the Companies Act.</li>
+                    <li><strong>Labour and Employment Law</strong>: Governs the rights and duties of workers and employers.</li>
+                    <li><strong>Taxation Law</strong>: Deals with the levy and collection of taxes.</li>
+                    <li><strong>Environmental Law</strong>: Focuses on the protection and preservation of the environment.</li>
+                    <li><strong>Consumer Protection Law</strong>: Protects the rights of consumers in case of disputes related to goods, services, and contracts.</li>
+                    <li><strong>Arbitration and Dispute Resolution</strong>: Deals with the settlement of disputes outside of courts.</li>
+                    <li><strong>Immigration Law</strong>: Deals with the entry, stay, and exit of individuals in a country.</li>
+                    <li><strong>Banking and Finance Law</strong>: Regulates the banking and financial industry.</li>
+                </ul>
+            </div>
+
+            <!-- Right Column: Search Form -->
+            <div class="search-container">
+                <form action="/search" method="POST" class="search-form">
+                    <label for="case_description">Enter Case Description or Keyword:</label>
+                    <input type="text" id="case_description" name="case_description" placeholder="e.g., criminal law, family law" required>
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
