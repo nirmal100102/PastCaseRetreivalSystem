@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="/static/lawyer logo.jpg" alt="Law Logo" class="logo">
+            <h1>Search Results</h1>
+        </div>
+        {% if message %}
+            <p class="no-results">{{ message }}</p>
+        {% else %}
+            <table class="results-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Case Description</th>
+                        <th>Keyword</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Created At</th>
+                        <th>Criminal Name</th>
+                        <th>Officer Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for case in matched_cases %}
+                        <tr>
+                            <td>{{ case.case_id }}</td>
+                            <td>{{ case.case_description }}</td>
+                            <td>{{ case.matched_keyword }}</td>
+                            <td>{{ case.case_date }}</td>
+                            <td>{{ case.status }}</td>
+                            <td>{{ case.created_at }}</td>
+                            <td>{{ case.criminal_name }}</td>
+                            <td>{{ case.officer_name }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+    <div class="back-button-container">
+        <a href="/" class="back-link">Back to Search</a>
+    </div>
+    <div class="button-container">
+        <a href="{{ url_for('add_case') }}" class="add-case-button">Add Case</a> <!-- Link to "Add Case" page or modal -->
+    </div>
+</body>
+</html>
+
+

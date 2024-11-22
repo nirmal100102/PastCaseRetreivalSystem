@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Case</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add Case Information</h2>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-message">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <form action="{{ url_for('processaddcase') }}" method="POST">
+            <div class="form-group">
+                <label for="case_id">Case ID</label>
+                <input type="text" id="case_id" name="case_id" required>
+            </div>
+            <div class="form-group">
+                <label for="case_description">Case Description</label>
+                <textarea id="case_description" name="case_description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="matched_keyword">Matched Keyword</label>
+                <input type="text" id="matched_keyword" name="matched_keyword" required>
+            </div>
+            <div class="form-group">
+                <label for="case_date">Case Date</label>
+                <input type="date" id="case_date" name="case_date" required>
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <input type="text" id="status" name="status" required>
+            </div>
+            <div class="form-group">
+                <label for="criminal_name">Criminal Name</label>
+                <input type="text" id="criminal_name" name="criminal_name" required>
+            </div>
+            <div class="form-group">
+                <label for="officer_name">Officer Name</label>
+                <input type="text" id="officer_name" name="officer_name" required>
+            </div>
+            <div class="form-group">
+                <label for="created_at">Created At</label>
+                <input type="date" id="created_at" name="created_at" required>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
