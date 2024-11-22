@@ -1,0 +1,384 @@
+.search-form {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    width: 250px; /* Adjust width to make it shorter */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-form button {
+    padding: 8px;
+    font-size: 14px;
+    width: 100px; /* Adjust width to make it shorter */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    max-width: 1100px; /* Increase max-width to make the page wider */
+    
+    padding: 50px; /* Increase padding for more space around content */
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 200px; /* Increase width to make the logo larger */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 20px; /* Adjust the space between h1 and the content below it */
+}
+
+
+.content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Left Column: Keyword Descriptions */
+.keywords {
+    flex: 1;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.keywords h2 {
+    font-size: 18px;
+    color: red;
+    align-items: center;
+    justify-content: center; /* Centers the text horizontally */
+    margin-bottom: 20px;
+}
+
+.keywords h3 {
+    font-size: 18px;
+    color: #f0f8ff;
+    margin-bottom: 10px;
+}
+
+.keywords ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.keywords li {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.keywords strong {
+    font-weight: bold;
+}
+
+/* Right Column: Search Form */
+.search-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-form label {
+    font-weight: bold;
+}
+
+.search-form input[type="text"] {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%; /* Ensures input adjusts to container */
+    max-width: 250px; /* Limits width */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+}
+
+.search-form button {
+    padding: 8px;
+    font-size: 14px;
+    width: 100px; /* Shorter button */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Results Table Styling */
+.results-table th, .results-table td {
+    padding: 10px 20px; /* Increased padding on the left and right for both columns */
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Specific adjustments for the ID column */
+.results-table th:nth-child(1), .results-table td:nth-child(1) {
+    padding-right: 50px; /* Increased space between ID and Case Description */
+}
+
+/* Specific adjustments for the Case Description column */
+.results-table th:nth-child(2), .results-table td:nth-child(2) {
+    padding-left: 50px; /* Increased space between ID and Case Description */
+}
+
+/* Center the back button */
+.back-button-container {
+    display: flex;
+    justify-content: center; /* Centers the button horizontally */
+    align-items: center; /* Vertically center the button */
+    width: 100%; /* Ensure the container takes full width */
+    margin-top: 20px; /* Adds space between the table and the button */
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px; /* Increase button padding for better visual */
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+.back-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button-container {
+    margin: 20px 0; /* Add space around the Add Case button */
+}
+
+.add-case-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #28a745; /* Green color for the Add Case button */
+    text-decoration: none;
+    border-radius: 4px;
+    border: 2px solid #28a745;
+}
+
+.add-case-button:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+.back-button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.back-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+    border: 2px solid #007bff;
+    border-radius: 4px;
+}
+
+.back-link:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    margin-top: 20px;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.form-container {
+    max-width: 500px;
+    width: 100%;
+    background-color: white;
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Center the form container on the page */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+/* Style each form group */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+label {
+    margin-bottom: 5px;
+    color: #555555;
+    font-weight: bold;
+}
+
+/* Style the input fields */
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    border-color: #007bff;
+}
+
+/* Style the submit button */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+
